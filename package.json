@@ -1,7 +1,7 @@
 {
   "name": "html-cs-js-demo",
   "version": "1.0.0",
-  "description": "This is the base code for an html+css+js demo non-assignment (extra credit).",
+  "description": "Final Exam for Comp426 Spring 2023.",
   "main": "server.js",
   "type": "module",
   "scripts": {
@@ -20,7 +20,7 @@
     "express",
     "server"
   ],
-  "author": "@jdmar3",
+  "author": "@jimmy-lynch",
   "license": "GPL-3.0-or-later",
   "dependencies": {
     "express": "^4.18.2",
