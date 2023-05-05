@@ -2,8 +2,64 @@
     <head>
         <title>Rock</title>
         <!-- Link to your script file(s) and CSS in here somewhere -->
+        <script src="scripts.js"></script>
+        <link rel="stylesheet" href="styles.css">
     </head>
     <body>
+        <h1>Welcome to Rock, Paper, Scissors and Lizard, Spock!</h1>
+        <h3> Don't know how to play?</h3>
+        <div class="hstack">
+            <a href="https://www.wikihow.com/Play-Rock,-Paper,-Scissors" class="hstack_item">Rules for RPS</a>
+            <a href="https://bigbangtheory.fandom.com/wiki/Rock,_Paper,_Scissors,_Lizard,_Spock" class="hstack_item">Rules for RPSLS</a>
+        </div>
+        <br>
+        <br>
+        <div class="options vstack">
+            <div class="vstack">
+                <h2 class="option-title">Select Game-Type</h2>
+                <div class="hstack">
+                    <input type="radio" id="rps" name="gameType" value="rps">
+                    <label for="rps">Rock, Paper, Scissors</label>
+                </div>
+                <div class="hstack">
+                    <input type="radio" id="rpsls" name="gameType" value="rpsls">
+                    <label for="rpsls">Rock, Paper, Scissors, Lizard, Spock</label>
+                </div>
+            </div>
+            <br>
+            <div class="vstack">
+                <h2 class="option-title">Select Game-Mode</h2>
+                <div class="hstack">
+                    <input type="radio" id="random" name="gameMode" value="random">
+                    <label for="random">Random</label>
+                </div>
+                
+                <div class="hstack">
+                    <input type="radio" id="opponent" name="gameMode" value="opponent">
+                    <label for="opponent">Vs. an Opponent</label>
+                </div>
+            </div>
+            <br>
+            <div class="vstack">
+                <h2 class="option-title">Choose Your Move!</h2>
+                <div class="hstack">
+                    <div id="move">
+                        <select id="move">
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+            <div class="hstack">
+                <button id="play">Play</button>
+                <button id="startOver">Start Over</button>
+            </div>
+        </div>
+        
+        <br>
+        <div id="outcome" class="outcome"></div>
+
 
     <!-- Your interface markup goes here -->
     <!-- For interface examples, look in the `/examples/` directory in the root of your starter code repo. -->
