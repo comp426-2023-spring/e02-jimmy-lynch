@@ -1,38 +1,37 @@
 const rps_moves = ["rock", "paper", "scissors"];
 const rpsls_moves = ["rock", "paper", "scissors", "lizard", "spock"];
+const select = document.getElementById("moves");
+const gameType = document.getElementById("gameType")
 
 function showMoves() {
-    move.innerHTML = "";
     if (document.getElementById('rps').checked) {
-        rps_moves.forEach(m => {
-            const x = document.createElement("move");
-            x.value = m;
-            x.textConent = x;
-            move.appendChild(x);
-        });
+        for(var i = 0; i < rps_moves.length; i++) {
+            var move = rps_moves[i];
+            var x = document.createElement("option");
+            x.textContent = move;
+            x.value = move;
+            select.appendChild(x);
+        }
         console.log("TEST")
     } else if (document.getElementById('rpsls').checked) {
-        rpsls_moves.forEach(m => {
-            const x = document.createElement("move");
-            x.value = m;
-            x.textConent = x;
-            move.appendChild(x);
-        });
+        for(var i = 0; i < rpsls_moves.length; i++) {
+            var move = rpsls_moves[i];
+            var x = document.createElement("option");
+            x.textContent = move;
+            x.value = move;
+            select.appendChild(x);
+        }
         console.log("TEST2");
     }
 }
 
-const playButton = document.getElementById("play");
-playButton.addEventListener
+gameType.addEventListener("change", () => {
+    showMoves();
+  });
 
 async function play() {
-    console.log("TEST2");
     showMoves();
 }
-
-playButton.addEventListener("click", () => {
-    play();
-  });
 
 function reset() {
 

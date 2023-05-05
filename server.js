@@ -63,7 +63,7 @@ if (args.debug) {
 // Create an app server
 const app = express()
 // Set a port for the server to listen on
-const port = args.port || args.p || process.env.PORT || 8080
+const port = args.port || args.p || process.env.PORT || 5050
 // Load app middleware here to serve routes, accept data requests, etc.
 //
 // Create and update access log
@@ -123,10 +123,6 @@ app.get('/app/rpsls/play/:shot', (req, res) => { //rpsls shot params
 // default endpoint)
 app.get("/app/*", (req, res) => {
     res.status(404).send("404 NOT FOUND");
-})
-
-app.listen(port, () => {
-    console.log(`Server listening on port ${port}`);
 })
 
 // Create app listener
