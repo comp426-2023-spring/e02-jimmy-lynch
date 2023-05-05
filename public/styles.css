@@ -37,3 +37,13 @@ p {
 .button {
     margin-top: 5;
 }
+
+.outcome {
+    font-size: 20px;
+    font-weight: bold;
+    padding-top: 20;
+}
+
+.emphasize {
+    font-size: 30px;
+}

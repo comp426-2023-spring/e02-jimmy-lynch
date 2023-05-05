@@ -62,12 +62,9 @@ async function play() {
     if (gm == "random") {
         outcome.textContent = `${data.player}!`
     } else {
-        if (data.result === "tie") {
-          outcome.textContent = `You chose ${data.player} and tied with ${data.opponent}!`
-        } else {
-          outcome.textContent = `You chose ${data.player}, your opponent chose ${data.opponent} and
-          you ${data.result}!`
-        }
+        outcome.textContent = `You chose ${data.player}...`
+        outcome2.textContent = `your opponent chose ${data.opponent} and...`
+        outcome3.textContent = `you ${data.result}!`
     }
 }
 
@@ -81,6 +78,8 @@ function reset() {
     document.getElementById("random").checked = false;
     document.getElementById("opponent").checked = false;
     outcome.textContent = ""
+    outcome2.textContent = ""
+    outcome3.textContent = ""
 
 }
 
