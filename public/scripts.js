@@ -32,8 +32,47 @@ function clearMoves() {
 }
 
 async function play() {
-    showMoves();
+    let gt = ""
+    if (document.getElementById('rps').checked) {
+        gt = "rps";
+    } else if (document.getElementById('rpsls').checked) {
+        gt = "rpsls";
+    }
+
+    let gm = ""
+    if (document.getElementById('opponent').checked) {
+        gm = "opponent";
+    } else if (document.getElementById('random').checked) {
+        gm = "random";
+    }
+
+
+    let url = ""
+    if (gm == "opponent") {
+        let move = document.getElementById("moves").value
+        url = `/app/${gt}/play/${move}`;
+        console.log(url)
+    } else {
+        url = `/app/${gt}/play/`;
+    }
+
+    const response = await fetch(url)
+    const data = await response.json();
+
+    if (gm == "random") {
+        outcome.textContent = `${data.player}!`
+    } else {
+        if (data.result === "tie") {
+          outcome.textContent = `You chose ${data.player} and tied with ${data.opponent}!`
+        } else {
+          outcome.textContent = `You chose ${data.player}, your opponent chose ${data.opponent} and
+          you ${data.result}!`
+        }
+    }
 }
+
+
+    
 
 function reset() {
     clearMoves()
@@ -41,6 +80,7 @@ function reset() {
     document.getElementById("rpsls").checked = false;
     document.getElementById("random").checked = false;
     document.getElementById("opponent").checked = false;
+    outcome.textContent = ""
 
 }
 
