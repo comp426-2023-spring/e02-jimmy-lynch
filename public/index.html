@@ -25,6 +25,7 @@
                     <input type="radio" id="rpsls" name="gameType" value="rpsls">
                     <label for="rpsls">Rock, Paper, Scissors, Lizard, Spock</label>
                 </div>
+                <button class="button" id="play" onclick="showMoves()">Load Moves</button>
             </div>
             <br>
             <div class="vstack">
@@ -45,7 +46,6 @@
                 <div class="hstack">
                     <div id="move">
                         <select id="moves">
-                            <option>select pls</option>
                         </select>
                     </div>
                 </div>
@@ -54,7 +54,7 @@
             <br>
             <div class="hstack">
                 <button id="play" onclick="play()">Play</button>
-                <button id="startOver">Start Over</button>
+                <button id="startOver" onclick="reset()">Start Over</button>
             </div>
         </div>
         
