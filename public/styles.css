@@ -2,46 +2,32 @@ body {
     text-align: center;
 }
 
-h1 {
-}
-
-p {
-}
-
 .hstack {
     align-items: center;
     display: inline-block;
 }
 
 .hstack_item {
-    padding: 4;
-}
-
-.options {
-    align-items: left;
-    justify-content: left;
-    justify-items: left;
-    justify-self: left;
+    padding: 4px;
 }
 
 .vstack {
-    align-items: left;
     display: inline-flex;
     flex-direction: column;
 }
 
 .option-title {
-    margin-bottom: 5;
+    margin-bottom: 5px;
 }
 
 .button {
-    margin-top: 5;
+    margin-top: 5px;
 }
 
 .outcome {
     font-size: 20px;
     font-weight: bold;
-    padding-top: 20;
+    padding-top: 20px;
 }
 
 .emphasize {
