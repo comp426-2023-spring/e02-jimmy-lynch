@@ -26,7 +26,7 @@
                     <input type="radio" id="rpsls" name="gameType" value="rpsls">
                     <label for="rpsls">Rock, Paper, Scissors, Lizard, Spock</label>
                 </div>
-                <button class="button" onclick="showMoves()">Load Moves</button>
+                <button class="button" type="button" onclick="showMoves()">Load Moves</button>
             </div>
             <br>
             <div class="vstack">
@@ -34,8 +34,7 @@
                 <div class="hstack">
                     <input type="radio" id="random" name="gameMode" value="random">
                     <label for="random">Random</label>
-                </div>
-                
+                </div>         
                 <div class="hstack">
                     <input type="radio" id="opponent" name="gameMode" value="opponent">
                     <label for="opponent">Vs. an Opponent</label>
@@ -54,8 +53,8 @@
             <br>
             <br>
             <div class="hstack">
-                <button id="play" onclick="play()">Play</button>
-                <button id="startOver" onclick="reset()">Start Over</button>
+                <button id="play" type="button" onclick="play()">Play</button>
+                <button id="startOver" type="button" onclick="reset()">Start Over</button>
             </div>
         </div>
         <br>
